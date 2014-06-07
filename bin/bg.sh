@@ -1,8 +1,7 @@
 #!/bin/bash
 while true;
 do
-    rm -f bg.txt
-    ls ~/images/wallpapers | sort -R | tail -n 1 > ~/images/wallpapers/bg.txt
-    nitrogen --set-auto ~/images/wallpapers/`cat ~/images/wallpapers/bg.txt`
+    IMAGE=$(ls ~/images/wallpapers | sort -R | tail -n 1)
+    nitrogen --set-auto ~/images/wallpapers/$IMAGE
     sleep 5m
 done
